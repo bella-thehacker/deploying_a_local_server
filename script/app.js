@@ -136,7 +136,7 @@ function postData(url, data) {
 function deleteData(url, id, card) {
 	fetch(`${url}/${id}`, {
 		method: 'DELETE',
-	})
+	}) 
 		.then((res) => res.json())
-		.then(() => card.remove());
+		.then(() => window.location.reload())
 }
